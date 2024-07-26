@@ -1,0 +1,226 @@
+.reviews-top {
+    font-family: 'NeoSans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: 16px;
+    padding-bottom: 16px;
+    padding-top: 24px;
+}
+
+.reviews-top > span {
+    font-family: 'NeoSans', sans-serif;
+    color: #969696;
+    text-align: center;
+    font-size: 64px;
+}
+
+.reviews-top > div {
+    font-family: 'NeoSans', sans-serif;
+    display: flex;
+    color: #969696;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 64px;
+    margin: 16px;
+    padding-bottom: 16px;
+    padding-top: 24px;
+}
+
+.reviews-top-text {
+    font-family: 'NeoSans', sans-serif;
+    color: #969696;
+    text-align: center;
+    font-size: 16px;
+}
+
+.reviews {
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 16px;
+    margin-left: 32px;
+    width: calc(100% - 64px);
+    padding-bottom: 64px;
+    justify-content: center;
+}
+
+.reviews-column {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reviews-row {
+    display: unset;
+}
+
+.review-grid {
+    font-family: 'NeoSans', sans-serif;
+    background-color: #23282d; 
+    margin: 8px;
+    width: 100%;
+    min-height: 128px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 8px black;
+    display: flex;
+    flex-direction: column;
+    animation: fade 500ms ease-out backwards;
+    transition: 0.25s;
+}
+
+.review-grid:hover {
+    box-shadow: 0px 0px 64px black;
+    z-index: 5;
+    -webkit-transform: perspective(400px) rotateX(2deg) scale(1.1);
+    transform: perspective(400px) rotateX(2deg) scale(1.1);
+}
+
+.review-grid.review-hover {
+    box-shadow: 0px 0px 64px black;
+    z-index: 5;
+    -webkit-transform: perspective(400px) rotateX(2deg) scale(1.1);
+    transform: perspective(400px) rotateX(2deg) scale(1.1);
+    transition: 0.25s;
+    background-color: #33393e; 
+}
+
+.review-compact.review-hover {
+    box-shadow: 0px 0px 64px black;
+    z-index: 5;
+    transition: 0.25s;
+    background-color: #33393e; 
+}
+
+.review-compact {
+    font-family: 'NeoSans', sans-serif;
+    background-color: #23282d;
+    margin-bottom: 8px;
+    width: 100%;
+    min-height: 128px;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    animation: fade 500ms ease-out backwards;
+    transition: 0.25s;
+}
+
+.review div {
+    animation: fade 500ms ease-out backwards;
+}
+
+.review-content-container {
+    margin: 16px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.review-project-name {
+    color: #ced2cc;
+    margin-left: 128px;
+}
+
+.review-category-img {
+    max-width: 24px;
+    max-height: 24px;
+    margin-left: 16px;
+}
+
+.review-project-owner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -8px;
+}
+
+.review-project-owner-name {
+    color: #ced2cc;
+    margin-top: 8px;
+}
+
+.review-project-owner-pfp {
+    max-width: 48px;
+    max-height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 24px;
+    background-image: url("/images/blank.png");
+}
+
+.review-content-details {
+    color: #ced2cc;
+    margin: 16px;
+    font-size: large;
+}
+
+.review-rating {
+    min-width: 100px;
+    background-image: url("/svg/5stars-white.svg");
+    background-position: 2px;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.review-rating div {
+    background-image: url("/images/star.png");
+    background-size: 16px;
+    margin: 2px;
+    width: 16px;
+    height: 16px;
+}
+
+.review-content-timestamp {
+    margin: 16px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #969696;
+}
+
+.review-content-timestamp span {
+    color: #969696;
+    font-size: 12px;
+}
+
+.review-content-timestamp img {
+    filter: invert(65%) sepia(29%) saturate(15%) hue-rotate(350deg) brightness(87%) contrast(83%);
+    margin-right: 16px;
+    height: 20px;
+}
+
+.reviews-bottom {
+    font-family: 'NeoSans', sans-serif;
+    display: flex;
+    color: #969696;
+    justify-content: center;
+    text-align: center;
+    margin: 16px;
+    padding-bottom: 16px;
+}
+
+@keyframes fade {
+    from {
+        transform: scale(1.02);
+        opacity: 0;
+
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media screen and ( max-width: 900px ) {
+    .reviews-top > div {
+        flex-direction: column;
+    }
+}

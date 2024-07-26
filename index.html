@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width,height=device-height initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/index.css" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.png">
+    <title>HOME | عمر محمد</title>
+</head>
+
+<body>
+    <div class="page-bg"></div>
+    <header class="header-top">
+        <img src="/images/identity.png" alt="عمر محمد" class="header-logo">
+        <div class="navmenu">
+            <div class="navmenu-element navmenu-current" tab="/html/home.html" onclick="switch_tab( this, this.getAttribute('tab') )">
+                <img src="/images/icons/house.png" alt="" class="navmenu-element-img">
+                <span class="navmenu-element-text">HOME</span>
+            </div>
+            <div class="navmenu-element" tab="/html/reviews.html" onclick="switch_tab( this, this.getAttribute('tab') )">
+                <img src="/images/icons/star.png" alt="" class="navmenu-element-img">
+                <span class="navmenu-element-text">REVIEWS</span>
+            </div>
+            <div class="navmenu-element" tab="/html/portfolio.html" onclick="switch_tab( this, this.getAttribute('tab') )">
+                <img src="/images/icons/briefcase.png" alt="" class="navmenu-element-img">
+                <span class="navmenu-element-text">PORTFOLIO</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="containers">
+        <iframe class="idcard" id="idcard-container"src="/html/idcard.html">
+
+        </iframe>
+
+        <iframe class="main-container" id="main-container" style="flex-grow: 1;" src="/html/home.html" onLoad="navmenu_action(this.contentWindow.location.pathname)">        
+            
+        </iframe>
+    </div>
+    
+
+</body>
+
+<script src="/js/index.js"></script>
+
+</html>
