@@ -12,7 +12,7 @@ a {
 }
 
 .page-bg {
-    background-image: url("/images/pictures/pic1.png");
+    background-image: url("/images/pictures/pic3.png");
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -61,6 +61,12 @@ a {
     max-height: 100%;
     height: calc( 100dvh - 112px);
     border: none;
+    
+    /* background: #23282dcb;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.3px);
+    -webkit-backdrop-filter: blur(10.3px); */
 }
 
 .main-container-expand {
