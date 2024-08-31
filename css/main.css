@@ -11,7 +11,7 @@ a {
 }
 
 #opening-animation {
-    background-color: #23282d;
+    background-color: #141618;
     position: fixed;
     top: 0;
     left: 0;
@@ -26,15 +26,21 @@ a {
 }
 
 @keyframes fadeIn {
-    0% { opacity: 1; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
-  }
-  
+    0% {
+        opacity: 1;
+    }
 
-.opening-animation-hide {
-    transition: 0.5s !important;
-    opacity: 0 !important;
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 .page-bg {
@@ -56,7 +62,7 @@ a {
     background-color: none;
     margin: 16px;
     justify-content: space-between;
-    height: calc( 100dvh - 112px);
+    height: calc(100dvh - 112px);
 }
 
 .container {
@@ -85,7 +91,7 @@ a {
     width: calc(100% - 64px);
     border-radius: 8px;
     margin: 16px;
-    
+
     height: 32px;
     display: flex;
     align-items: center;
@@ -162,7 +168,7 @@ a {
     width: 20px;
     filter: invert(64%) sepia(6%) saturate(3458%) hue-rotate(129deg) brightness(86%) contrast(89%);
     position: absolute;
-    
+
     margin-bottom: 6px;
     transition: linear 0.08s;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
