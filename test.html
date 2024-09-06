@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline Bar Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+        .nav-bar {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .nav-bar button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .nav-bar button:hover {
+            background-color: #0056b3;
+        }
+        .chart-container {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .chart {
+            display: none;
+        }
+        .chart.active {
+            display: block;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="nav-bar">
+            <button onclick="showChart(0)">New Users</button>
+            <button onclick="showChart(1)">New Servers</button>
+            <button onclick="showChart(2)">Assignments</button>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="usersChart" class="chart active"></canvas>
+            <canvas id="serversChart" class="chart"></canvas>
+            <canvas id="assignmentsChart" class="chart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Data for charts
+        const usersData = ['2024-09-01', '2024-09-03', '2024-09-05'];
+        const serversData = ['2024-08-30', '2024-09-01', '2024-09-04'];
+        const assignmentsData = ['2024-08-29', '2024-09-02', '2024-09-04'];
+
+        // Common chart options
+        const chartOptions = {
+            type: 'bar',
+            data: {
+                labels: [], // Labels will be updated
+                datasets: [{
+                    data: [], // Data will be updated
+                    backgroundColor: 'rgba(0, 123, 255, 0.6)',
+                    borderColor: 'rgba(0, 123, 255, 1)',
+                    borderWidth: 1,
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            color: '#333',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            color: '#333',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        };
+
+        // Initialize charts
+        const usersChart = new Chart(document.getElementById('usersChart'), {
+            ...chartOptions,
+            data: {
+                labels: usersData,
+                datasets: [{
+                    ...chartOptions.data.datasets[0],
+                    data: Array(usersData.length).fill(1),
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                    borderColor: 'rgba(75, 192, 192, 1)'
+                }]
+            }
+        });
+
+        const serversChart = new Chart(document.getElementById('serversChart'), {
+            ...chartOptions,
+            data: {
+                labels: serversData,
+                datasets: [{
+                    ...chartOptions.data.datasets[0],
+                    data: Array(serversData.length).fill(1),
+                    backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                    borderColor: 'rgba(255, 99, 132, 1)'
+                }]
+            }
+        });
+
+        const assignmentsChart = new Chart(document.getElementById('assignmentsChart'), {
+            ...chartOptions,
+            data: {
+                labels: assignmentsData,
+                datasets: [{
+                    ...chartOptions.data.datasets[0],
+                    data: Array(assignmentsData.length).fill(1),
+                    backgroundColor: 'rgba(255, 206, 86, 0.6)',
+                    borderColor: 'rgba(255, 206, 86, 1)'
+                }]
+            }
+        });
+
+        // Function to show the correct chart
+        function showChart(index) {
+            const charts = document.querySelectorAll('.chart');
+            charts.forEach((chart, i) => {
+                chart.classList.toggle('active', i === index);
+            });
+        }
+    </script>
+
+</body>
+</html>
