@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirect Page</title>
+</head>
+<body>
+    <script>
+        const url = new URLSearchParams(window.location.search).get('url');
+        if (url) {
+            window.location.href = url;
+        } else {
+            document.write("No URL provided");
+        }
+    </script>
+</body>
+</html>
