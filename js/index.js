@@ -4,6 +4,7 @@ function switch_tab(e, tab) {
 }
 
 let main_container = document.getElementById("main-container");
+let idcard = document.getElementById("idcard-container");
 
 window.addEventListener("resize", main_container_idcard);
 
@@ -22,11 +23,13 @@ function main_container_idcard(){
 
     if( window.innerWidth <= 900 ){
         main_container.classList.add("main-container-expand");
+        idcard.classList.add("idcard-hide");
         main_container.contentDocument.querySelector("iframe.idcard-iframe").style.display = "flex";
         main_container.contentDocument.querySelector("iframe.idcard-iframe").style.height = `${main_container.contentDocument.querySelector("iframe.idcard-iframe").contentDocument.querySelector(".home-top").getBoundingClientRect().height }px`;
     }else{
         if( main_container.src.includes("home.html") ){
             main_container.classList.remove("main-container-expand");
+            idcard.classList.remove("idcard-hide");
             main_container.contentDocument.querySelector("iframe.idcard-iframe").style.display = "none";
         }
     }

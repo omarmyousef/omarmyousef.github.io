@@ -1,5 +1,4 @@
 body {
-    /* padding-bottom: 1000px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -293,8 +292,8 @@ body {
 
 .section-title {
     color: #ced2cc;
-    margin-left: 32px;
     font-family: 'NeoSans', sans-serif;
+    text-align: center;
     font-size: max( 2vw, 24px );
 }
 
@@ -341,3 +340,84 @@ body {
     width: 96px;
     filter: brightness(1.2);
 }
+
+/* */
+
+.resume-container {
+    max-width: 900px;
+    background-color: transparent;
+    padding: 2.5rem;
+    border-radius: 15px;
+  }
+  .resume-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .resume-header h1 {
+    font-size: 2.8rem;
+    color: white;
+  }
+  .resume-header p {
+    font-size: 1.4rem;
+    color: #bbbbbb;
+  }
+  .resume-contact {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .resume-contact a {
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .resume-contact a:hover {
+    background-color: white;
+    color: #121212;
+  }
+  section {
+    margin-top: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+    color: white;
+    border-bottom: 2px solid white;
+    margin-bottom: 1rem;
+  }
+  .resume-card {
+    background-color: #23282d;
+    border-radius: 10px;
+    padding: 1.8rem;
+    margin-bottom: 1.8rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  .resume-card h3 {
+    color: white;
+    font-size: 1.6rem;
+  }
+  .resume-card p {
+    color: #bbbbbb;
+    font-size: 1.1rem;
+  }
+  .resume-ul {
+    list-style-type: disc;
+    margin: 1rem 0 1rem 2rem;
+    color: #bbbbbb;
+  }
+  .resume-li {
+    margin-bottom: 0.8rem;
+  }
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .resume-contact {
+      flex-direction: column;
+      align-items: center;
+    }
+    .resume-card {
+      padding: 1.2rem;
+    }
+  }

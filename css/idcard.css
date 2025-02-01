@@ -3,6 +3,10 @@ body {
     width: 100%;
 }
 
+html {
+    width: 100%;
+}
+
 .home-top {
     /* margin-top: 64px; */
     width: 100%;
@@ -22,9 +26,10 @@ body {
 }
 
 .home-intro-container img.pfp {
-    width: min( 32vw, 192px );
+    width: min( 48vw, 192px );
     border-radius: 50%;
     box-shadow: 0px 0px 24px black;
+    border: white 4px solid;
     /* background-color: #6e88c1; */
 }
 
