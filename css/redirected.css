@@ -9,11 +9,11 @@ html {
 }
 
 body {
-    background: linear-gradient(45deg, #000000, #323232);
-    background-size: 200% 200%;
-    height: 100%;
-    width: 100%;
-    animation: background 5s ease-in-out infinite;
+    background-image: url('/images/pictures/topography.png');
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: 32em;
+    background-
 }
 
 @keyframes background {
@@ -69,19 +69,19 @@ body {
     padding: 8px;
     border-radius: 4px;
     margin-top: 32px;
-    font-family: 'NeoSans', sans-serif;
+    font-family: "Fjalla One", sans-serif;
     font-size: 16px;
 }
 
 .home-intro-container span.name {
-    color: #ced2cc;
-    font-family: 'NeoSans', sans-serif;
+    color: #323232;
+    font-family: "Fjalla One", sans-serif;
     font-size: max(3vw, 32px);
-}
+} 
 
 .home-intro-container span.title {
-    color: #ced2cc;
-    font-family: 'NeoSans', sans-serif;
+    color: #323232;
+    font-family: "Fjalla One", sans-serif;
     font-size: max(1vw, 16px);
 }
 
@@ -100,7 +100,7 @@ body {
     opacity: 0.01%;
     transition: 0.2s;
     z-index: -1;
-    font-family: 'NeoSans', sans-serif;
+    font-family: "Fjalla One", sans-serif;
     color: #c5c6c7;
     background-color: #23282d;
     width: fit-content;
@@ -131,7 +131,7 @@ body {
 }
 
 .stack-container {
-    font-family: 'NeoSans', sans-serif;
+    font-family: "Fjalla One", sans-serif;
     margin: 8px;
     width: 3%;
     min-width: 32px;
@@ -150,7 +150,7 @@ body {
 .stack-title {
     display: none;
     justify-self: flex-end;
-    font-family: 'NeoSans', sans-serif;
+    font-family: "Fjalla One", sans-serif;
     color: #c5c6c7;
     font-size: 80%;
     width: 100%;
@@ -181,9 +181,9 @@ body {
 
 .review {
     background-color: #23282d;
-    color: #ced2cc;
+    color: #323232;
     margin: 8px;
-    font-family: 'NeoSans', sans-serif;
+    font-family: "Fjalla One", sans-serif;
     background-color: #23282d;
     min-height: 128px;
     border-radius: 16px;
@@ -204,7 +204,7 @@ body {
 /*
 .review:hover > .review-content-details {
     max-height: unset;
-    background: -webkit-linear-gradient(#ced2cc,#ced2cc);
+    background: -webkit-linear-gradient(#323232,#323232);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -253,7 +253,7 @@ body {
 }
 
 .review-project-name {
-    color: #ced2cc;
+    color: #323232;
 }
 
 .review-category-img {
@@ -272,7 +272,7 @@ body {
 }
 
 .review-project-owner-name {
-    color: #ced2cc;
+    color: #323232;
     margin-top: 8px;
 }
 
@@ -291,7 +291,7 @@ body {
     min-height: 110px;
     max-height: 110px;
     overflow: hidden;
-    background: -webkit-linear-gradient(#ced2cc, #ced2cc, #ced2cc, rgba(0, 0, 0, 0));
+    background: -webkit-linear-gradient(#323232, #323232, #323232, rgba(0, 0, 0, 0));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -340,7 +340,7 @@ body {
 }
 
 .reviews-bottom {
-    font-family: 'NeoSans', sans-serif;
+    font-family: "Fjalla One", sans-serif;
     display: flex;
     color: #969696;
     justify-content: center;
@@ -365,9 +365,9 @@ body {
 }
 
 .section-title {
-    color: #ced2cc;
+    color: #323232;
     margin-left: 32px;
-    font-family: 'NeoSans', sans-serif;
+    font-family: "Fjalla One", sans-serif;
     font-size: max(2vw, 24px);
 }
 
@@ -378,7 +378,7 @@ body {
     border-radius: 4px;
     max-width: 256px;
     width: 80%;
-    font-family: 'NeoSans', sans-serif;
+    font-family: "Fjalla One", sans-serif;
     font-size: 16px;
     text-align: center;
 }

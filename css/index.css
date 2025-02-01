@@ -189,13 +189,6 @@ a {
     src: url("/fonts/NeoSansArabic.ttf");
 }
 
-@media screen and ( max-width: 900px ) {
-    .idcard {
-        display: none;
-        width: 0;
-    }
-}
-
 /* bg */
   
   @keyframes background { 
